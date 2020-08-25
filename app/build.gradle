@@ -6,19 +6,8 @@ android {
     defaultConfig {
         applicationId "com.navygation.cardnewsmaker"
         minSdkVersion 17
-        targetSdkVersion 25
-<<<<<<< HEAD
-<<<<<<< HEAD
-        versionCode 1
-        versionName "1.17"
-=======
-        versionCode 2
-        versionName "2.0"
->>>>>>> 19d4a7c0111026237b19b1a724abcff2923f4d1a
-=======
         versionCode 6
         versionName "3.0.4"
->>>>>>> upstream/master
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         renderscriptSupportModeEnabled true
     }

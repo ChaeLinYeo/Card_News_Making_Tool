@@ -10,10 +10,7 @@ import android.graphics.Typeface;
 import android.media.ExifInterface;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-<<<<<<< HEAD
-=======
 import android.os.Environment;
->>>>>>> 19d4a7c0111026237b19b1a724abcff2923f4d1a
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -363,11 +360,7 @@ public class PhotoEditorActivity extends AppCompatActivity implements View.OnCli
 
             public void onFinish() {
                 String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-<<<<<<< HEAD
-                String imageName = "CARD_" + timeStamp + ".jpg";
-=======
                 String imageName = "CARD_" + timeStamp + ".jpeg";
->>>>>>> 19d4a7c0111026237b19b1a724abcff2923f4d1a
                 Intent returnIntent = new Intent();
                 returnIntent.putExtra("imagePath", photoEditorSDK.saveImage("CardNewsMaker", imageName));
                 setResult(Activity.RESULT_OK, returnIntent);
@@ -379,23 +372,6 @@ public class PhotoEditorActivity extends AppCompatActivity implements View.OnCli
     private void saveAndShareThisImage() {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String imageName = "Card_" + timeStamp + ".jpg";
-<<<<<<< HEAD
-        Intent returnIntent = new Intent();
-        returnIntent.putExtra("imagePath", photoEditorSDK.saveImage("CardNewsMaker", imageName));
-        setResult(Activity.RESULT_OK, returnIntent);
-
-        Intent share = new Intent(Intent.ACTION_SEND);
-
-//        share.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(new File(path)));
-//        share.putExtra(Intent.EXTRA_TEXT, "Sha-red via" + APP_URL);
-        File sharedFile = new File("/CardNewsMaker/*.jpg");
-        Uri uri = Uri.fromFile(sharedFile);
-        share.setType("image/*");
-        share.putExtra(Intent.EXTRA_STREAM, uri.toString());
-        startActivity(Intent.createChooser(share, "편집한 카드 공유하기"));
-    }
-
-=======
         String imagePath = photoEditorSDK.saveImage("CardNewsMaker", imageName);
         Intent returnIntent = new Intent();
         returnIntent.putExtra("imagePath", imagePath);
@@ -410,8 +386,7 @@ public class PhotoEditorActivity extends AppCompatActivity implements View.OnCli
         startActivity(Intent.createChooser(share, "Share"));
     }
 
-
->>>>>>> 19d4a7c0111026237b19b1a724abcff2923f4d1a
+    
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.close_tv) {
