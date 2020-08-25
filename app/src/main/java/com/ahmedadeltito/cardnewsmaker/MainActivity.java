@@ -1,16 +1,16 @@
 package com.ahmedadeltito.cardnewsmaker;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+import com.yellowten.cardnewsmaker.LicenseActivity;
 
 public class MainActivity extends MediaActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
 
     public void openUserGallery(View view) {
         openGallery();
@@ -21,9 +21,54 @@ public class MainActivity extends MediaActivity {
     }
 
     @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Activity transition Code
+        Button button1 = (Button) findViewById(R.id.licensecbtn);
+
+        button1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                // Activity transition Code
+                Intent intent = new Intent(getApplicationContext(), LicenseActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button2 = (Button) findViewById(R.id.websitebtn);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                // Activity transition Code
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://swimtw.synology.me/wordpress"));
+                startActivity(intent);
+            }
+        });
+    }
+
+
+
+
+    @Override
     protected void onPhotoTaken() {
         Intent intent = new Intent(MainActivity.this, PhotoEditorActivity.class);
         intent.putExtra("selectedImagePath", selectedImagePath);
         startActivity(intent);
+    }
+    @Override
+    protected void onDestroy() {
+        if (bitmap != null) {
+            bitmap.recycle();
+            bitmap = null;
+        }
+        System.gc();
+        super.onDestroy();
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Card News Making Tool</string>
+    <string name="app_name">Card News Maker</string>
     <string name="title_activity_photo_editor">PhotoEditorActivity</string>
     <string name="done">Done</string>
     <string name="save">Save</string>
@@ -27,4 +27,38 @@
     <string name="undo">Undo</string>
     <string name="erase">Erase</string>
 
+    <string name="open_license">License</string>
+    <string name="open_website">Website</string>
+
+    <string name="mylicense">
+        LICENSE\n\
+        Software : Card News Maker\n
+        Team : Navygation\n\
+        The software and its license\nfor developing Card News Maker.\n\
+        * PhotoEditorSDK - MIT License\n\n\
+        Card_News_Maker License is MIT License.\n
+        The app icon is CC BY-NC-ND License.\n\
+        2017.11.23\n
+        Navygation\n\n\
+    </string>
+
+    <string name="license">
+        MIT License\n\
+        Copyright (c) 2017\n\
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:\n
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.\n
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.\n\
+.</string>
 </resources>
